@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutry</title>
+    <link rel="shortcut icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="dark bg-[#f5f5f5] font-roboto" id="body">
+    <nav id="nav" class="top-0 left-0 right-0 w-full bg-white shadow-md lg:bg-transparent lg:shadow-none">
+        <div class="mx-auto md:max-w-2xl lg:hidden" id="navBefore">
+            <div class="flex justify-between items-center px-6 py-4">
+                <div class="">
+                    <img src="./assets/images/logo.svg" alt="Logo" class="" />
+                </div>
+                <div class="" id="hamburger-icon" onclick="toggleDropdown()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+                <div class="hidden" id="cross-icon" onclick="toggleDropdown()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+            </div>
+            <div id="dropdown-menu" class="h-0 px-6 overflow-hidden duration-500 ease-in-out">
+                <ul class="text-[#1d2b53] font-medium pb-3">
+                    <li class="my-3"><a href="javascript:void(0)" class="">Home</a></li>
+                    <li class="my-3">
+                        <a href="javascript:void(0)" class="">Features</a>
+                    </li>
+                    <li class="my-3">
+                        <a href="javascript:void(0)" class="">Services</a>
+                    </li>
+                    <li class="my-3"><a href="javascript:void(0)" class="">Blog</a></li>
+                    <li class="my-3">
+                        <a href="javascript:void(0)" class="">Newsletter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="navAfter" class="hidden lg:flex justify-between items-center max-w-[90%] mx-auto py-4 xl:max-w-6xl">
+            <div class="">
+                <img src="./assets/images/logo.svg" alt="Logo" class="">
+            </div>
+            <ul class="flex gap-8 text-xl font-semibold">
+                <li class="text-[#1d2b53] hover:text-[#ff004c] duration-500 ease-in-out"><a href="" class="">Home</a>
+                </li>
+                <li class="text-[#1d2b53] hover:text-[#ff004c] duration-500 ease-in-out"><a href=""
+                        class="">Features</a></li>
+                <li class="text-[#1d2b53] hover:text-[#ff004c] duration-500 ease-in-out"><a href=""
+                        class="">Services</a></li>
+                <li class="text-[#1d2b53] hover:text-[#ff004c] duration-500 ease-in-out"><a href="" class="">Blog</a>
+                </li>
+                <li class="text-[#1d2b53] hover:text-[#ff004c] duration-500 ease-in-out"><a href=""
+                        class="">Newletter</a></li>
+            </ul>
+            <div class="">
+                <button
+                    class="text-white hover:bg-[#ff004c] flex items-center rounded-md px-6 py-4 mx-auto text-sm font-semibold bg-[#473be9] duration-500 ease-in-out">
+                    Get Started
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <button id="scroll-btn"
+        class="bg-white hover:bg-[#493df0] duration-500 ease-in-out hover:text-white shadow-md p-3 rounded-full fixed bottom-8 right-8 hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <section id="hero" class="text-[#1d2b53] text-center px-6 mt-12 responsive lg:grid lg:grid-cols-2 xl:max-w-6xl">
+        <div class="hidden xl:block absolute top-0 left-0">
+            <img src="./assets/images/shape1.png" alt="" class="h-[43.5rem]">
+        </div>
+        <div class="mb-8 lg:order-1">
+            <img src="./assets/images/hero-banner.png" alt="Hero Banner" class="" />
+        </div>
+        <div class="lg:text-left lg:my-auto">
+            <h3
+                class="font-bold text-3xl md:font-semibold md:leading-8 md:text-[2.5rem] lg:[3rem] lg:leading-[3rem] xl:text-[3.5rem] xl:leading-[3.5rem]">
+                Secure IT solutions for a more secure environment
+            </h3>
+            <p class="font-light text-[0.95rem] mt-2 mb-4 md:mt-4 lg:leading-8 text-gray-500 lg:font-normal">
+                Velit hendrerit sit auctor tempor sem. Congue mi tempor condimentum
+                felis arcu, non cursus. Nulla pharetra porttitor sed platea arcu et leo
+                odio.
+            </p>
+            <button
+                class="text-white bg-[#ff004c] flex items-center rounded-md px-6 py-4 mx-auto lg:mx-0 text-lg font-semibold mt-4 hover:bg-[#473be9] duration-500 ease-in-out">
+                Get Started Now
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden xl:block absolute top-0 right-0">
+            <img src="./assets/images/shape3.png" alt="" class="h-[43.5rem]">
+        </div>
+    </section>
+
+    <section id="features" class="text-[#1d2b53] text-center px-6 bg-white mt-16 py-16 ">
+        <div class="responsive">
+            <p class="mb-4 text-[0.9rem] text-gray-500 font-semibold">
+                How Can Help You
+            </p>
+            <h3
+                class="font-bold text-[1.4rem] mb-10 md:text-[2rem] lg:w-[50%] lg:mx-auto lg:text-[2.25rem] xl:text-[2.75rem]">
+                We're helpin teams do their best work
+            </h3>
+            <div class="grid gap-8 md:grid-cols-2 md:gap-0 lg:grid-cols-4 lg:gap-4">
+                <div class="border p-8 md:p-4 md:text-left md:border-0">
+                    <div class="">
+                        <img src="./assets/images/features-icon-1.png" alt="" class="mx-auto md:m-0" />
+                    </div>
+                    <h5 class="featureTitle">Zero Configutation</h5>
+                    <p class="featureContent">
+                        Lorem ipsum dolor sit amet. conse ctetur adipiscing elit. Sed est
+                        non feugiat sagittis.
+                    </p>
+                    <a href="javascript:void(0)"
+                        class="text-[#ff004c] hover:text-[#1d2b53] hover:gap-4 duration-500 ease-in-out font-medium text-[0.9rem] flex justify-center items-center mt-4 md:justify-start">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border p-8 md:p-4 md:text-left md:border-0">
+                    <div class="">
+                        <img src="./assets/images/features-icon-2.png" alt="" class="mx-auto md:m-0" />
+                    </div>
+                    <h5 class="featureTitle">Code Security</h5>
+                    <p class="featureContent">
+                        Lorem ipsum dolor sit amet. conse ctetur adipiscing elit. Sed est
+                        non feugiat sagittis.
+                    </p>
+                    <a href="javascript:void(0)"
+                        class="text-[#ff004c] hover:text-[#1d2b53] hover:gap-4 duration-500 ease-in-out font-medium text-[0.9rem] flex justify-center items-center mt-4 md:justify-start">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border p-8 md:p-4 md:text-left md:border-0">
+                    <div class="">
+                        <img src="./assets/images/features-icon-3.png" alt="" class="mx-auto md:m-0" />
+                    </div>
+                    <h5 class="featureTitle">Team Management</h5>
+                    <p class="featureContent">
+                        Lorem ipsum dolor sit amet. conse ctetur adipiscing elit. Sed est
+                        non feugiat sagittis.
+                    </p>
+                    <a href="javascript:void(0)"
+                        class="text-[#ff004c] hover:text-[#1d2b53] hover:gap-4 duration-500 ease-in-out font-medium text-[0.9rem] flex justify-center items-center mt-4 md:justify-start">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border p-8 md:p-4 md:text-left md:border-0">
+                    <div class="">
+                        <img src="./assets/images/features-icon-4.png" alt="" class="mx-auto md:m-0" />
+                    </div>
+                    <h5 class="featureTitle">Access Controlled</h5>
+                    <p class="featureContent">
+                        Lorem ipsum dolor sit amet. conse ctetur adipiscing elit. Sed est
+                        non feugiat sagittis.
+                    </p>
+                    <a href="javascript:void(0)"
+                        class="text-[#ff004c] hover:text-[#1d2b53] hover:gap-4 duration-500 ease-in-out font-medium text-[0.9rem] flex justify-center items-center mt-4 md:justify-start">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="px-6 mt-16 py-16">
+        <div class="responsive lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="lg:flex lg:items-center">
+                <img src="./assets/images/service-1.png" alt="Service 1" class="" />
+            </div>
+            <div class="">
+                <p class="text-gray-500 font-semibold font-[0.8rem] mt-8 mb-4 lg:mt-0">
+                    Services We Offer
+                </p>
+                <h3 class="text-[#1d2b53] font-bold text-2xl mb-8 md:text-[2rem] lg:text-[2.3rem] lg:leading-[2.75rem]">
+                    We are here, to help your startup business
+                </h3>
+                <div class="grid gap-8">
+                    <div class="servicesOfferedOdd">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Cloud Databases
+                    </div>
+                    <div class="servicesOfferedEven">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Website Hosting
+                    </div>
+                    <div class="servicesOfferedOdd">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Remote Desktop
+                    </div>
+                    <div class="servicesOfferedEven">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        File Backup
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-12 lg:my-4 lg:col-span-full" />
+
+            <div class="lg:flex lg:items-center lg:order-last">
+                <img src="./assets/images/service-2.png" alt="Service 2" class="" />
+            </div>
+            <div class="">
+                <p class="text-gray-500 font-semibold font-[0.8rem] mt-8 mb-4 lg:mt-0">
+                    Our Services
+                </p>
+                <h3 class="text-[#1d2b53] font-bold text-2xl mb-8 md:text-[2rem] lg:text-[2.3rem] lg:leading-[2.75rem]">
+                    Best IT & technology service in your area
+                </h3>
+                <div class="grid gap-8">
+                    <div class="servicesOfferedOdd">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Design & Development
+                    </div>
+                    <div class="servicesOfferedEven">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Android Apps Development
+                    </div>
+                    <div class="servicesOfferedOdd">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        Laravel Web Development
+                    </div>
+                    <div class="servicesOfferedEven">
+                        <div class="serviceCheck">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        React Web Development
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="text-center px-6 pb-16 bg-white mt-12 pt-12">
+        <div class="responsive ">
+            <p class="mb-4 text-[0.9rem] text-gray-500 font-semibold">
+                Latest News
+            </p>
+            <h3
+                class="font-bold text-[#1d2b53] text-2xl mb-10 md:text-[2rem] lg:w-[50%] lg:mx-auto lg:text-[2.25rem] lg:leading-8 xl:text-[2.75rem] xl:leading-10">
+                Our latest articles & resources
+            </h3>
+            <div class="grid gap-8 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+                <div class="rounded-lg shadow-2xl">
+                    <div class="overflow-hidden rounded-t-xl">
+                        <img src="./assets/images/blog-1.jpg" alt="Blog 1"
+                            class="hover:scale-110 duration-500 ease-in-out">
+                    </div>
+                    <div class="flex gap-3 px-6 py-4 text-sm">
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                            TECHNOLOGY
+                        </p>
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            25 FEB, 2022
+                        </p>
+                    </div>
+                    <p
+                        class="text-[#1d2b53] text-xl px-6 pb-6 font-bold text-left hover:text-[#ff004c] duration-500 ease-in-out">
+                        How is technology working with new things?
+                    </p>
+                </div>
+                <div class="rounded-lg shadow-2xl">
+                    <div class="overflow-hidden rounded-t-xl">
+                        <img src="./assets/images/blog-2.jpg" alt="Blog 2"
+                            class="hover:scale-110 duration-500 ease-in-out">
+                    </div>
+                    <div class="flex gap-3 px-6 py-4 text-sm">
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                            DESIGN
+                        </p>
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            25 FEB, 2022
+                        </p>
+                    </div>
+                    <p
+                        class="text-[#1d2b53] text-xl px-6 pb-6 font-bold text-left hover:text-[#ff004c] duration-500 ease-in-out">
+                        Top 10 important tips on IT services & design
+                    </p>
+                </div>
+                <div class="rounded-lg shadow-2xl">
+                    <div class="overflow-hidden rounded-t-xl">
+                        <img src="./assets/images/blog-3.jpg" alt="Blog 3"
+                            class="hover:scale-110 duration-500 ease-in-out">
+                    </div>
+                    <div class="flex gap-3 px-6 py-4 text-sm">
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                            STARTUP
+                        </p>
+                        <p class="flex gap-2 items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#ff004c]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            25 FEB, 2022
+                        </p>
+                    </div>
+                    <p
+                        class="text-[#1d2b53] text-xl px-6 pb-6 font-bold text-left hover:text-[#ff004c] duration-500 ease-in-out">
+                        How our company works in different ways?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="px-6">
+        <div class="responsive lg:grid lg:grid-cols-2 lg:gap-8 py-16">
+            <div class="lg:order-last">
+                <img src="./assets/images/newsletter.png" alt="Newletter" class="">
+            </div>
+            <div class="my-auto">
+                <p class="text-gray-500 font-semibold font-[0.8rem] mt-8 mb-4 lg:mt-0">
+                    Subscribe Our Newsletter
+                </p>
+                <h3
+                    class="text-[#1d2b53] font-bold text-3xl mb-8 tracking-wide md:text-[2rem] lg:text-[2.25rem] lg:leading-[2.5rem] xl:text-[2.75rem] xl:leading-[3rem]">
+                    The latest resources, sent to your inbox weekly
+                </h3>
+                <div class="">
+                    <input type="email"
+                        class="px-6 py-4 w-full border border-gray-300 rounded-lg text-gray-500 text-lg font-semibold"
+                        id="" placeholder="Enter your email address">
+                    <button
+                        class="text-white bg-[#ff004c] flex items-center rounded-md px-6 py-4 text-lg font-semibold mt-4 hover:bg-[#473be9] duration-500 ease-in-out">
+                        Subscribe Now
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="address" class="px-6 py-16 bg-white text-[#1d2b53]">
+        <div class="responsive md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+            <div class="">
+                <div class="md:-ml-6 xl:ml-0">
+                    <img src="./assets/images/logo.svg" alt="Logo" class="md:scale-75 xl:scale-100" />
+                </div>
+                <p
+                    class="text-lg my-8 md:text-sm md:w-[80%] text-gray-500 md:leading-8 md:my-4 lg:w-[90%] xl:text-base xl:my-6 xl:leading-10">
+                    Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua minim.
+                </p>
+                <div
+                    class="flex items-center text-xl font-bold my-8 md:text-sm md:my-4 md:w-[80%] lg:w-[90%] xl:text-base">
+                    <div
+                        class="rounded-full bg-[#f5f5f5] text-[#ff004c] hover:bg-[#ff004c] hover:text-white p-2 w-fit mr-3 duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    2750 Quadra Street Victoria, Canada.
+                </div>
+            </div>
+            <div class="grid grid-cols-2 text-gray-500 md:auto-rows-min">
+                <h5
+                    class="col-span-2 h-fit text-2xl font-bold mb-4 md:text-lg md:mb-0 text-[#1d2b53] xl:text-[1.7rem] xl:mb-2">
+                    Quick Links</h5>
+                <ul class="">
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">IT Startup</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Software</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Business</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">App</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Insurance</a></li>
+                </ul>
+                <ul class="">
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Property</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Big Data</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Distance Learning</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Chatbot</a></li>
+                    <li class="my-3 hover:text-[#ff004c] duration-500 ease-in-out md:text-sm xl:text-base"><a
+                            href="javascript:void(0)" class="">Medical</a></li>
+                </ul>
+            </div>
+
+            <div class="text-gray-500">
+                <h5 class="font-bold text-2xl mt-8 mb-6 md:text-lg text-[#1d2b53] lg:mt-0 xl:text-[1.7rem]">Contact with
+                    us</h5>
+                <div class="p-6 shadow-[15px_15px_60px_15px_rgba(0,0,0,0.1)]">
+                    <div class="flex items-center text-lg md:text-sm xl:text-base">
+                        <div
+                            class="rounded-full bg-[#f5f5f5] text-[#ff004c] hover:bg-[#ff004c] hover:text-white p-3 w-fit mr-3 duration-500 ease-in-out">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        hello@solutry.com
+                    </div>
+                    <hr class="my-3">
+                    <div class="flex items-center text-lg md:text-sm">
+                        <div
+                            class="rounded-full bg-[#f5f5f5] text-[#ff004c] hover:bg-[#ff004c] hover:text-white p-3 w-fit mr-3 duration-500 ease-in-out">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        +1-485-456-0102
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-6 bg-[#1d2b53] text-white text-center p-12">
+        <div class="responsive md:flex md:justify-between md:items-center">
+            <div class="text-lg md:text-base">
+                © 2022 <a href="" class="underline">Rohil Varma</a>. All Rights Reserved
+            </div>
+            <div class="flex justify-center items-center mt-4 gap-2">
+                <div class="bg-[#4a5675] rounded-full p-2 hover:bg-[#ff004c] duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6" fill="#ffffff">
+                        <path
+                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg>
+                </div>
+                <div class="bg-[#4a5675] rounded-full p-2 hover:bg-[#ff004c] duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6" fill="#ffffff">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg>
+                </div>
+                <div class="bg-[#4a5675] rounded-full p-2 hover:bg-[#ff004c] duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6" fill="#ffffff">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                </div>
+                <div class="bg-[#4a5675] rounded-full p-2 hover:bg-[#ff004c] duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6" fill="#ffffff">
+                        <path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="unused-classes" class="hidden h-[12.5rem]"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
